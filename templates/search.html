@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<style>
+.btn-primary{
+background-color: #e85a4f;
+border: none;
+}
+ .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+background-color: #e43427 !important;
+}
+a:hover, a{
+direction: none;
+color: #e43427;
+
+}
+</style>
+
+<div class="container " style="justify-content: center; width: 100%;">
+      <div class="row" style = "margin-top: 100px;" >
+          <div class="card mt-100" style="margin-top: 50px">
+            <div class="card-body">
+              <form method="post" action="results">
+                <label style="margin-bottom: 5px;"> Enter User Name </label>
+                <input type="text" class="form-control" name="user_name" style="margin-bottom: 10px;">            
+                <label style="margin-bottom: 5px;" for="from">From</label>
+                <input style="margin-bottom: 15px;" id="startDate" type="date" name="from" class="form-control" required>
+                <label style="margin-bottom: 5px;" for="to">To</label>
+                <input style="margin-bottom: 15px;" id="endDate" type="date" name="to" class="form-control" required>
+                <input style="margin-bottom: 15px;" type="submit" class="btn btn-primary " value="Get Tweets">
+              </form> <br>
+              <p> Need help? <a href="/register"> Click here </a></p>
+            </div>
+          </div>
+     </div>
+</div>
+
+
+    <script>
+      document.getElementById("endDate").addEventListener("change", function() {
+          var endDate = new Date(this.value);
+          var startDate = new Date(document.getElementById("startDate").value);
+          if (endDate <= startDate) {
+              alert("End Date is Not Valid.")
+              this.value = null;
+          }
+          console.log(startDate);
+          console.log(endDate);
+      });
+  </script>
+{% endblock %}

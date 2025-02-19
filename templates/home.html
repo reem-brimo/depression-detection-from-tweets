@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<style>   
+.cos{
+  border-color: #e43427;margin-bottom:30px ;padding-left: 1.5rem;padding-right: 1.5rem;
+  transition: color .15s ease-in-out,
+  background-color .15s ease-in-out,
+  border-color .15s ease-in-out,
+  box-shadow .15s ease-in-out;
+}
+</style>
+
+<div style="height: 100vh;  background-color: black;">
+<!--This is the start of the image slider-->
+<div id="carousel" class="carousel slide " data-ride="carousel" >
+  <ol class="carousel-indicators">
+    <li data-bs-target="#carousel" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#carousel" data-bs-slide-to="1"></li>
+  </ol>
+  <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <div class="d-flex justify-content-center ">
+          <img src="../static/images/slidefour.jpg">
+        </div>
+        <div class="carousel-caption" style="align-self: start; padding-top: 20px ">
+          <h5>How To Use The Website</h5>
+          <p>
+            Enter a user name which have a public account <br>
+            Enter the time period of tweets you want to detect depression <br>
+            Get Results! <br>
+            <br>
+          </p>
+        </div>
+      </div>
+      <div class="carousel-item ">
+        <div class="d-flex justify-content-center">
+          <img src="../static/images/slideone.jpg">
+        </div>
+
+        <div class="carousel-caption">
+          <h4>Let's get started!</h4>
+          <a href="/search" class="btn btn-sm btn-outline-secondary cos"
+          >Start</a>
+        </div>
+      </div>
+    <a class="carousel-control-prev" role="button" href="#carousel" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+    </a>
+    <a class="carousel-control-next" role="button" href="#carousel" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+  </div>
+</div>
+<!--End of Image Slider-->
+</div>
+{% endblock %}

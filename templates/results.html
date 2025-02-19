@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<style>
+    #title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 100%;
+    }
+    
+    #subtitle {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    table{
+        margin-top: 120px;
+        margin-left: auto;
+    margin-right: auto;
+    }
+
+.styled-table {
+    border-collapse: collapse;
+
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+    
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #e85a4f;
+}
+    
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #e85a4f;
+}
+
+    
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+tr:hover {background-color: rgba(157, 215, 251, 0.5);}
+    
+.styled-table thead tr {
+    background-color: #e85a4f;
+    color: #ffffff;
+    text-align: left;
+}
+    </style>
+
+
+    <div class ='styled-table'>
+        {% for table in tables %}
+        {{ table|safe }}
+        {% endfor %}
+        <br>
+        <br>
+    </div>
+
+
+    {% if depressed %}
+    <p id="subtitle"> User is at risk of Depressed</p>
+    {%else%}
+    <p id="subtitle">User is state is Normal</p>
+    {%endif%}
+{% endblock %}

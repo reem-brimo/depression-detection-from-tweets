@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+html{ height: 100vh;}
+
+
+.carousel{
+    HEIGHT: 100%;
+  }
+  .carousel-inner{
+    height: 100%;
+  }
+    .carousel-item {
+      height: 100%;
+      background: black;
+      color: white;
+      position: relative;
+      background-position: center;
+      background-size: cover;
+    }
+  
+    .carousel-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding-bottom: 10px;
+    }
+  
+    img{
+      opacity: 0.4;
+      width: 100%;
+     height: auto;
+    }
+
+  
+.bg-image{
+    background-color: #85FFBD;
+    background-image: -webkit-linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+
+}
+.bd{
+    height: 100vh;
+    width: 100%;
+}
+
+
+.report-text{
+    text-align: center;
+    font-size:30px
+}
+
+.bg-light{
+    background: #3a4f5c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3a4f5c, #3a4f5c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,  #3a4f5c, #3a4f5c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.mt-100{
+    margin-top: 100px;
+}
+.mt-300{
+    margin-top: 300px;
+}
+#content{
+    height: 100%;
+}
+
+.wrapper {
+    max-width: 350px;
+    min-height: 500px;
+    margin: 80px auto;
+    padding: 40px 30px 30px 30px;
+    background-color: #eae7dc;
+    border-radius: 15px;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff
+}
+
+.wrapper .name {
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 1.3px;
+    padding-left: 10px;
+    color: #555
+}
+
+.wrapper .form-field input {
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.2rem;
+    color: #666;
+    padding: 10px 15px 10px 10px
+}
+.wrapper .form-field {
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff
+}
+.wrapper .form-field .fas {
+    color: #555
+}
+
+.wrapper .btn {
+    box-shadow: none;
+    width: 100%;
+    height: 40px;
+    background-color: #e85a4f;
+    color: #fff;
+    border-radius: 50px;
+    box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
+    letter-spacing: 1.3px
+}
+
+.wrapper .btn:hover {
+    background-color: #e43427
+}
+
+.wrapper a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #e43427
+}
+
+.wrapper a:hover {
+    color: #e43427
+}
+
+@media(max-width: 380px) {
+    .wrapper {
+        margin: 30px 20px;
+        padding: 40px 15px 15px 15px
+    }
+}
